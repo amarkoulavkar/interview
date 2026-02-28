@@ -20,10 +20,8 @@ async function connectToMongo() {
     process.env.MONGO_URI || process.env.MONGODB_URI ||
     'mongodb://localhost:27017/interview';
 
-  await mongoose.connect(MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  // mongoose 6+ no longer needs or supports useNewUrlParser/useUnifiedTopology
+  await mongoose.connect(MONGO_URI);
   isConnected = true;
   console.log(`MongoDB connected to ${MONGO_URI}`);
 }
