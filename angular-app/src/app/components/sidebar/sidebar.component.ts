@@ -16,7 +16,7 @@ import { Question } from '../../models/question';
         <a class="btn btn-sm btn-primary" routerLink="/add">+ Add</a>
       </div>
       <ul class="list-group">
-        <li *ngFor="let q of questions$ | async" class="list-group-item list-group-item-action mb-1" routerLinkActive="active" [routerLink]="['/question', q.id]">
+        <li *ngFor="let q of questions$ | async" class="list-group-item list-group-item-action mb-1" routerLinkActive="active" [routerLink]="['/question', q._id]">
           <div class="fw-bold text-secondary">{{ q.technology }}</div>
           <div class="small text-dark">{{ q.question | slice:0:60 }}{{ q.question.length>60 ? '...' : '' }}</div>
         </li>

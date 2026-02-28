@@ -24,8 +24,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
               <h5 class="card-title mb-1">{{ q.question }}</h5>
             </div>
             <div class="btn-group">
-              <a class="btn btn-sm btn-outline-primary" [routerLink]="['/question', q.id, 'edit']">Edit</a>
-              <button class="btn btn-sm btn-outline-danger" (click)="confirmDelete(q.id)">Delete</button>
+              <a class="btn btn-sm btn-outline-primary" [routerLink]="['/question', q._id, 'edit']">Edit</a>
+              <button class="btn btn-sm btn-outline-danger" (click)="confirmDelete(q._id)">Delete</button>
             </div>
           </div>
 
