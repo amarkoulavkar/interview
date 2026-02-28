@@ -16,9 +16,11 @@ async function connectToMongo() {
     return;
   }
 
-  const MONGO_URI =
-    process.env.MONGO_URI || process.env.MONGODB_URI ||
-    'mongodb://localhost:27017/interview';
+    const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI;
+    if (!MONGO_URI) {
+      // fail fast rather than silently connect to localhost in production
+      throw new Error('MONGO_URI environment variable is not set');
+    }
 
   // mongoose 6+ no longer needs or supports useNewUrlParser/useUnifiedTopology
   await mongoose.connect(MONGO_URI);
