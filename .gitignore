@@ -11,6 +11,8 @@
 /node_modules/
 /package-lock.json
 /yarn.lock
+/client/node_modules/
+/server/node_modules/
 
 # Environment files
 /.env

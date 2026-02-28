@@ -1,0 +1,29 @@
+/* Global styles */
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Support for ngx-editor rich content */
+.card-text p, .card-text span, .card-text pre, .card-text code {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.card-text span[style*="background-color"] {
+  padding: 2px 4px;
+  border-radius: 2px;
+  /* Allow inline background color from editor */
+}
+.card-text pre {
+  background: #f5f5f5;
+  padding: 8px;
+  border-radius: 4px;
+  font-family: 'Fira Mono', 'Consolas', 'Monaco', monospace;
+  font-size: 0.95em;
+}
+.card-text code {
+  background: #eaeaea;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
